@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Testr.pk-Sign Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <meta name="description" content="Inline validation is very easy to implement using the Architect Framework.">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="google-signin-scope" content="profile email" />
+    <!-- <meta
+      name="google-signin-client_id"
+      content="81755462282-o5fvesh6onitmibsv9ejf4gebvlr1h5l.apps.googleusercontent.com"
+    /> -->
+    <!-- <meta
+      name="google-signin-client_id"
+      content="169483209995-lp9no4a9a8mv4b8jlostpuadetdgsbb5.apps.googleusercontent.com"
+    /> -->
+    <!--
+    =========================================================
+    * ArchitectUI HTML Theme Dashboard - v1.0.0
+    =========================================================
+    * Product Page: https://dashboardpack.com
+    * Copyright 2019 DashboardPack (https://dashboardpack.com)
+    * Licensed under MIT (https://github.com/DashboardPack/architectui-html-theme-free/blob/master/LICENSE)
+    =========================================================
+    * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+    -->
+    <!-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script> -->
+    <script src="assets/scripts/google_auth.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+<link href="./main.css" rel="stylesheet">
+<link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v12.0&appId=5540121042670818&autoLogAppEvents=1" nonce="eLJRRRNo"></script>
+    
+    <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+        <div class="app-header-2 app-header header-shadow">
+            <div class="app-header__logo app-header__logo2">
+                <div class="logo-src"></div>
+                
+            </div>
+            <!-- <div class="app-header__mobile-menu">
+                <div>
+                    <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="app-header__menu">
+                <span>
+                    <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                        <span class="btn-icon-wrapper">
+                            <i class="fa fa-ellipsis-v fa-w-6"></i>
+                        </span>
+                    </button>
+                </span>
+            </div>     -->
+            
+        </div>        
+                
+        <div class="app-main app-main2">
+                  
+                 <div class="app-main__outer app-main__outer2">
+                    <div class="app-main__inner">
+                        <div class="main-card mb-3 card">
+                            <div class="card-body">
+                                <h3 class="center card-title">Signup</h3>
+                                <!-- class="needs-validation" -->
+                                <form id="signupForm" novalidate>
+                                    <div class="form-row form-row2">
+                                        <div class="col-md-12 mb-12">
+                                            <label for="validationCustom01">User Name</label>
+                                            <input type="text" class="form-control" id="validationCustom01" placeholder="John" required>
+                                            <div class="invalid-feedback" id="field1">
+                                                Please provide a valid Name.
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                    </div>
+                                    <div class="form-row form-row2">
+                                        <div class="col-md-12 mb-12">
+                                            <label for="validationCustom03">Email</label>
+                                            <input type="email" class="form-control" id="validationCustom03" placeholder="example@abc.com" required>
+                                            <div class="invalid-feedback" id="field3">
+                                                Please provide a valid Email.
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-12 mb-12">
+                                            <label for="validationCustom03">Password</label>
+                                            <input type="password" class="form-control" id="password1" placeholder="********" required>
+                                            <div class="invalid-feedback" id="field4">
+                                                Please provide a valid password. (must be greter than 8 characters and must be alphanumeric)
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-12 mb-12">
+                                            <label for="validationCustom03">Confirm Password</label>
+                                            <input type="password" class="form-control" id="password2" placeholder="********" required>
+                                            <div class="invalid-feedback" id="field5">
+                                                Password does not match.
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required="">
+                                                <label class="form-check-label" for="invalidCheck">
+                                                    Agree to terms and conditions
+                                                </label>
+                                                <div class="invalid-feedback" id="field6">
+                                                    You must agree before submitting.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <button class="btn btn-primary" type="submit">Sign Up</button>    
+                                    </div>
+                                    <br>
+                                    <div class="form-row">
+                                        <a class="login-signup" href="login.html">Already have an account? Login.</a>
+                                    </div>
+                                    
+                                    
+                                    
+                                    <hr>
+                                    <h6>Sign Up with:</h6>
+                                    <br>
+                                    <div class="form-row form-row-custom">
+                                        
+                                        <div class="col-md-6 mb-6">
+                                            <div class="center-btn">
+                                                <div class="fb-login-button" data-width="" data-onlogin="checkLoginState();"  data-scope="email" data-size="medium" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
+                                                
+                                                <!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button> -->
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-6">
+                                            <div class="center-btn">
+                                                <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+                                                <!-- <a href="#" onclick="signOut();">Sign out</a> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </form>
+            
+                                <script>
+                                    // Example starter JavaScript for disabling form submissions if there are invalid fields
+                                    (function() {
+                                        'use strict';
+                                        window.addEventListener('load', function() {
+                                            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                                            var forms = document.getElementsByClassName('needs-validation');
+                                            // Loop over them and prevent submission
+                                            var validation = Array.prototype.filter.call(forms, function(form) {
+                                                form.addEventListener('submit', function(event) {
+                                                    if (form.checkValidity() === false) {
+                                                        event.preventDefault();
+                                                        event.stopPropagation();
+                                                    }
+                                                    form.classList.add('was-validated');
+                                                }, false);
+                                            });
+                                        }, false);
+                                    })();
+                                </script>
+                            </div>
+                        </div>
+                        <!-- <div class="main-card mb-3 card">
+                            <div class="card-body">
+                                <h5 class="card-title">Tooltips Validation</h5>
+                                <form class="needs-validation" novalidate>
+                                    <div class="form-row">
+                                        <div class="col-md-4 mb-3">
+                                            <label for="validationTooltip01">First name</label>
+                                            <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
+                                            <div class="valid-tooltip">
+                                                Looks good!
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <label for="validationTooltip02">Last name</label>
+                                            <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Otto" required>
+                                            <div class="valid-tooltip">
+                                                Looks good!
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <label for="validationTooltipUsername">Username</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                                                </div>
+                                                <input type="text" class="form-control" id="validationTooltipUsername" placeholder="Username" aria-describedby="validationTooltipUsernamePrepend" required>
+                                                <div class="invalid-tooltip">
+                                                    Please choose a unique and valid username.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="validationTooltip03">City</label>
+                                            <input type="text" class="form-control" id="validationTooltip03" placeholder="City" required>
+                                            <div class="invalid-tooltip">
+                                                Please provide a valid city.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <label for="validationTooltip04">State</label>
+                                            <input type="text" class="form-control" id="validationTooltip04" placeholder="State" required>
+                                            <div class="invalid-tooltip">
+                                                Please provide a valid state.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <label for="validationTooltip05">Zip</label>
+                                            <input type="text" class="form-control" id="validationTooltip05" placeholder="Zip" required>
+                                            <div class="invalid-tooltip">
+                                                Please provide a valid zip.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary" type="submit">Submit form</button>
+                                </form>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+        </div>
+    </div>
+<!-- <script type="text/javascript" src="./assets/scripts/main.js"></script>
+ -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <script src="assets/scripts/passwordValidation.js"></script>
+ 
+ <!-- <script>
+    function onSignIn(googleUser) {
+        console.log("innnn")
+      // Useful data for your client-side scripts:
+      var profile = googleUser.getBasicProfile();
+      console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+      console.log("Full Name: " + profile.getName());
+      console.log("Given Name: " + profile.getGivenName());
+      console.log("Family Name: " + profile.getFamilyName());
+      console.log("Image URL: " + profile.getImageUrl());
+      console.log("Email: " + profile.getEmail());
+      // The ID token you need to pass to your backend:
+      var id_token = googleUser.getAuthResponse().id_token;
+      console.log("ID Token: " + id_token);
+      var arr=
+        {
+            "auth_token": id_token
+        }
+      $.ajax({
+            url:'http://127.0.0.1:8000/social/google/',
+            type: 'POST',
+            data: JSON.stringify(arr),
+            contentType: 'application/json;',
+            dataType: 'json',
+            success: function(msg) {
+                alert("logged in");
+                console.log()
+                localStorage.setItem("username",profile.getGivenName());
+                //window.location.assign("index.html");
+                // window.location.href="index.html"
+            },
+            error: function(data)
+            {
+               alert(data);
+               console.log(data);
+               //console.log(data);
+               
+            }
+        });
+    }
+    function init() {
+gapi.load('auth2', function() {
+  /* Ready. Make a call to gapi.auth2.init or some other API */
+});
+}
+  </script>
+  <script>
+    function signOut() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      console.log(auth2);
+      auth2.signOut().then(function () {
+        console.log('User signed out.');
+      });
+    }
+  </script> -->
+  <script src="assets/scripts/facebook_auth.js"></script>
+  <!-- <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId            : '5540121042670818',
+        autoLogAppEvents : true,
+        xfbml            : true,
+        version          : 'v5.0'
+      });
+    };
+    FB.getLoginStatus(function (response) {
+        
+        // Called after the JS SDK has been initialized.
+        statusChangeCallback(response); // Returns the login status.
+    });
+  </script> -->
+  <!-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script> -->
+
+  
+</body>
+<footer>
+    
+    <link href="./custom.css" rel="stylesheet">
+</footer>
+</html>

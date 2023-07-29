@@ -1,0 +1,673 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Testr.pk</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <script src="ckeditor/ckeditor.js"></script>
+
+
+
+    <!--
+    =========================================================
+    * ArchitectUI HTML Theme Dashboard - v1.0.0
+    =========================================================
+    * Product Page: https://dashboardpack.com
+    * Copyright 2019 DashboardPack (https://dashboardpack.com)
+    * Licensed under MIT (https://github.com/DashboardPack/architectui-html-theme-free/blob/master/LICENSE)
+    =========================================================
+    * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+    -->
+<link href="./main.css" rel="stylesheet">
+
+
+
+<link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
+</head>
+
+<body>
+    
+    <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+        <div class="app-header header-shadow">
+            <div class="app-header__logo">
+                <a href="index.html"><div class="logo-src" ></div></a>
+                <div class="header__pane ml-auto">
+                    <div>
+                        <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="app-header__mobile-menu">
+                <div>
+                    <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="app-header__menu">
+                <span>
+                    <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                        <span class="btn-icon-wrapper">
+                            <i class="fa fa-ellipsis-v fa-w-6"></i>
+                        </span>
+                    </button>
+                </span>
+            </div>    <div class="app-header__content">
+                <!-- <div class="app-header-left">
+                    <div class="search-wrapper">
+                        <div class="input-holder">
+                            <input type="text" class="search-input" placeholder="Type to search">
+                            <button class="search-icon"><span></span></button>
+                        </div>
+                        <button class="close"></button>
+                    </div>
+                    <ul class="header-menu nav">
+                        <!-- <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link">
+                                <i class="nav-link-icon fa fa-database"> </i>
+                                Discipline
+                            </a>
+                        </li>
+                        <li class="btn-group nav-item">
+                            <a href="javascript:void(0);" class="nav-link">
+                                <i class="nav-link-icon fa fa-edit"></i>
+                                Subjects
+                            </a>
+                        </li>
+                        <li class="dropdown nav-item">
+                            <a href="javascript:void(0);" class="nav-link">
+                                <i class="nav-link-icon fa fa-cog"></i>
+                                Settings
+                            </a>
+                        </li>
+                    </ul>        </div> -->
+                <div class="app-header-right">
+                    <div class="header-btn-lg pr-0">
+                        <div class="widget-content p-0">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left">
+                                    <div class="btn-group">
+                                        <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/1.jpg" alt="">
+                                            <i class="fa fa-angle-down ml-2 opacity-8"></i>
+                                        </a>
+                                        <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
+                                            <!-- <button type="button" tabindex="0" class="dropdown-item">User Account</button>
+                                            <button type="button" tabindex="0" class="dropdown-item">Settings</button>
+                                            <h6 tabindex="-1" class="dropdown-header">Header</h6>
+                                            <button type="button" tabindex="0" class="dropdown-item">Actions</button> -->
+                                            <button type="button" tabindex="0" class="dropdown-item" onclick="logout_function()">Logout</button>
+                                            <!-- <div tabindex="-1" class="dropdown-divider"></div>
+                                            <button type="button" tabindex="0" class="dropdown-item">Dividers</button> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content-left  ml-3 header-user-info">
+                                    <div class="widget-heading">
+                                        User
+                                    </div>
+                                    <!-- <div class="widget-subheading">
+                                        Teacher
+                                    </div> -->
+                                </div>
+                                <!-- <div class="widget-content-right header-user-info ml-3">
+                                    <button type="button" class="btn-shadow p-1 btn btn-primary btn-sm show-toastr-example">
+                                        <i class="fa text-white fa-calendar pr-1 pl-1"></i>
+                                    </button>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>        
+                </div>
+            </div>
+        </div>             
+          <div class="app-main">
+            <div id="app-sidebar-custom" class="app-sidebar sidebar-shadow">
+                <div class="app-header__logo">
+                    <div class="logo-src"></div>
+                    <div class="header__pane ml-auto">
+                        <div>
+                            <button type="button" class="hamburger close-sidebar-btn hamburger--elastic"
+                                    data-class="closed-sidebar">
+                                        <span class="hamburger-box">
+                                            <span class="hamburger-inner"></span>
+                                        </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-header__mobile-menu">
+                    <div>
+                        <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                                    <span class="hamburger-box">
+                                        <span class="hamburger-inner"></span>
+                                    </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="app-header__menu">
+                            <span>
+                                <button type="button"
+                                        class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                                    <span class="btn-icon-wrapper">
+                                        <i class="fa fa-ellipsis-v fa-w-6"></i>
+                                    </span>
+                                </button>
+                            </span>
+                </div>
+                <div class="scrollbar-sidebar">
+                    <div class="app-sidebar__inner">
+                        <ul class="vertical-nav-menu">
+                            <!-- <li class="app-sidebar__heading">Menu</li> -->
+    
+                            <!-- <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-rocket"></i>
+                                    Dashboard
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-rocket"></i>
+                                    Users
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon pe-7s-rocket"></i>
+                                    Documents
+                                </a>
+                            </li> -->
+                            <li>
+                                <a href="view_tag.html">
+                                    <i class="metismenu-icon fas fa-tags">&nbsp;</i>
+                                    Dashboard
+                                </a>
+                            </li>
+                            <!-- <li>
+                                <a href="view_discipline.html">
+                                    <i class="metismenu-icon fa fa-graduation-cap">&nbsp;</i>
+                                    Disciplines
+                                </a>
+                            </li>
+                            <li>
+                                <a href="view_subject.html">
+                                    <i class="metismenu-icon fas fa-book">&nbsp;</i>
+                                    Subjects
+                                </a>
+                            </li> -->
+                            <li>
+                                <a href="view_paper.html">
+                                    <i class="metismenu-icon fas fa-clipboard-list">&nbsp;</i>
+                                    Papers
+                                </a>
+                            </li>
+                            <!-- <li>
+                                <a href="#" class="mm-active">
+                                    <i class="metismenu-icon fas fa-question-circle"> &nbsp;</i>
+                                    Questions
+                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                </a>
+                            </li> -->
+                                <!-- <ul id="sidebar-menu" class="mm-show2"> -->
+                                    <li>
+                                
+                                        <a href="index.html" class="">
+                                            <i class="metismenu-icon fas fa-question-circle"> &nbsp;</i>
+                                            Add Question
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        
+                                        <a href="view1.html">
+                                            <i class="metismenu-icon fas fa-question-circle"> &nbsp;</i>
+                                            Questions
+                                        </a>
+                                        
+                                    </li>
+                                    <!-- <li>
+                                        
+                                        <a href="my_question.html">
+                                            
+                                            My Questions
+                                        </a>
+                                        
+                                    </li> -->
+                                            
+                                            
+                                        <!-- </ul> -->
+                            
+                            <li>
+                                <a href="view2.html">
+                                    <i class="metismenu-icon fas fa-question-circle"> &nbsp;</i>
+                                    Filters
+                                </a>
+                            </li>
+    
+    
+                        </ul>
+                    </div>
+                </div>
+            </div>
+                
+                <div id="app-main__outer-custom" class="app-main__outer">
+                    <div class="app-main__inner">
+                        <div class="app-page-title">
+                             
+                       <div class="page-title-wrapper page-title-wrapper2">
+
+                                <div class="page-title-heading" style="margin-left: 6px;">
+                                    <div>
+                                        <h5>Enter Paper Code <span title="see 'paper' tab for reference."><i class="pe-7s-info custom-info" aria-hidden="true"></i></span></h5>
+                                        <!-- <input name="papercode1" id="papercode1" class="form-control" placeholder="Paper Code">                                           -->
+                                    </div>
+                                </div>
+                                <div class="page-title-heading" style="margin-left: 1%;">
+                                    <div>
+                                        <input name="papercode1" id="papercode1" class="form-control" placeholder="e.g: 9712/O/N/11">
+                                    </div>
+                                </div>
+                                <div class="page-title-heading" style="margin-left: 1%;">
+                                    <div>
+                                        
+                                    <button class="btn btn-success" id="search-btn" onclick="paper_code_search()">Set Values</button>
+                                    </div>
+                                </div>
+        
+                                
+                            </div>
+                            <!-- d -->
+                            
+                            <br>
+
+
+                             
+                            <div class="page-title-wrapper">
+
+                                
+        
+                                
+        
+                                <div class="page-title-heading" style="margin-left: 6px;">
+                                    <div>
+                                        <h6 for="discipline1">Discipline</h6>
+                                        <input name="discipline1" id="discipline1"  disabled    class="form-control" >
+                                    </div>
+                                </div>
+        
+                                <div class="page-title-heading" style="margin-left: 1%;">
+                                    <div>
+                                        <h6 for="subject1">Subject</h6>
+                                        <input name="subject1" id="subject1"  disabled    class="form-control"
+                                               placeholder="Subject" >
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="page-title-heading" style="margin-left: 1%;">
+                                    <div>
+                                        <h6 for="year1">Paper Year</h6>
+                                        <input class="form-control"  id="year1"  disabled type="text" />
+                                    </div>
+                                </div>
+
+                                <div class="page-title-heading" style="margin-left: 1%;">
+                                    <div>
+                                        <h6 for="session1">Session</h6>
+                                        <input type="text" name="session1" id="session1" class="form-control"  disabled style="width: 100%;">
+                                            
+                                            
+                                            
+                                    </div>
+                                </div>
+                                <!-- <div class="page-title-heading" style="margin-left: 1%;">
+                                    <div>
+                                        <select name="papercode1" id="papercode1" class="form-control" placeholder="Paper Code" onchange="updateField()" >
+                                            <option value="select code">select Paper</option>
+                                        </select>
+                                    </div>
+                                </div> -->
+
+
+
+
+
+                                <div class="page-title-heading" style="margin-left: 1%;">
+                                    <div>
+                                        <h6 for="papertitle1">Paper Title</h6>
+                                        <input name="papertitle1" id="papertitle1" disabled class="form-control">
+                                    </div>
+                                </div>
+                        </div>
+                           
+
+
+                        </div> 
+
+
+
+
+
+
+                        <div class="main-card mb-3 card">
+                            <div class="card-body">
+                                <div class="tab-content" id="addhere">
+
+
+                                    
+
+                                    <div class="tab-pane active show" id="tab-eg6-0" role="tabpanel">
+
+                                        <br>
+                                        <div class="flex">
+                                            <div class="vertical-middle fb2 flex2">
+                                                    
+                                                <!-- <div class="position-relative form-group"> -->
+                                                    <div class="field-heading field-heading-margin">
+                                                        
+                                                            <h5>Question Name</h5>
+                                                        
+                                                    </div>
+                                                    <div class="">
+                                                        <input name="name1" id="name1" class="form-control">
+                                                    </div>
+                                                    
+                                                <!-- </div> -->
+                                            
+                                            </div>
+                                            <div class="vertical-middle fb2 flex2">
+                                                <div class="field-heading field-heading-margin">
+                                                    <h5>Question Type</h5>
+                                                </div>
+                                                <div>
+                                                    <select name="type1" id="type1" class="form-control form-select" >
+                                                        <option value="Long Question">Long Question</option>
+                                                        <option value="Short Question">Short Question</option>
+                                                        <option value="MCQ">MCQ</option>
+
+                                                        <option value="Fill in the blank">Fill in the blank</option>
+                                                        <option value="True/False">True/False</option>
+
+                                                        
+                                                    </select>
+                                                    
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    <br>
+
+                                    <div class="field-heading position-relative form-group">
+                                        
+                                            <h5>Question Statement</h5>
+                                        
+                                    </div>
+
+                                        <form id="target" action="">
+                                            <textarea name="editor1" id="editor1" rows="10" cols="80">
+                                                
+                                            </textarea>
+                                            <!-- <script>
+                                                // Replace the <textarea id="editor1"> with a CKEditor 4
+                                                // instance, using default configuration.
+                                                CKEDITOR.replace( 'editor1' );
+                                            </script> -->
+                                            
+                                            
+                                        </form>
+
+                                        <br>
+
+
+                                        <!-- question image start -->
+                                        <div id="question-images-out">
+                                            <div class="form-control-2 form-control update-p" id="question-images"></div>
+                                        </div>
+                                        <br>
+                                        <div class="update-p">
+                                            <div contenteditable="true" disabled="true" class="form-control imgdiv" id="qdiv">
+                                                <div id="qpre" class="update-p"></div>
+                                            </div>
+                                            <div class="imgdiv-2">
+                                                <button class="btn btn-light" onclick="reset_images_q()">reset</button>
+                                                <br>
+                                                <br>
+                                                <input type="file" name="myfile" id="qFile" multiple=true onchange="fileUpload(event)">
+                                            <!-- <button onclick="questionUploadImage()">upload</button> -->
+                                                
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        <!-- question image End -->
+
+
+
+                                        <!-- question image start -->
+
+                                        <!-- question image End -->
+
+
+
+
+
+
+                                        <!-- <div class="container-md flex">
+                                            <div class="fb2">
+                                            <h5>Tags</h5>
+                                            <select id="tag1" class=" js-example-tags" name="tag1" multiple="multiple" style="width: 100%;">
+                                            </select>
+                                            
+    
+    
+    
+    
+                                            <script>
+                                                $(".js-example-tags").select2({
+                                                    tags: true
+                                                    });
+                                            </script>
+                                            </div>
+                                            <div class="fb2">
+                                                <div>
+                                                    <h5>Difficulty</h5>
+                                                    <select name="difficulty1" id="difficulty1" class="form-control js-example-tags" >
+                                                        <option value="Easy">Easy</option>
+                                                        <option value="Medium">Medium</option>
+                                                        <option value="Hard">Hard</option>
+                                                        
+                                                        </select>
+                                                    
+                                                </div>
+                                                </div>
+                                        </div> -->
+
+                                      <br>
+
+                                      <div class="field-heading position-relative form-group">
+                                          
+                                          <h5>Answer Statement</h5>
+                                      
+                                      </div>
+
+                                      <form id="target" action="">
+                                        <textarea name="editor12" id="editor12" rows="10" cols="80">
+                                        
+                                        </textarea>
+                                        <!-- <script>
+                                            CKEDITOR.replace( 'editor12' );
+                                        </script> -->
+                                        
+                                        
+                                    </form>
+                                    <br>
+                                    
+                                    <!-- Answer image upload Start-->
+                                    <div id="answer-images-out">
+                                        <div class="form-control-2 form-control update-p" id="answer-images"></div>
+                                    </div>
+                                    <br>
+                                    
+                                    <div class="update-p">
+                                            
+                                        <div contenteditable="true" class="form-control imgdiv" id="adiv">
+                                            <div id="apre" class="update-p"></div>
+                                        </div>
+                                        <div class="imgdiv-2">
+                                            <button class="btn btn-light" onclick="reset_images_a()">reset</button>
+                                            <br><br>
+                                            <input type="file" name="myfile" id="aFile" multiple=true onchange="fileUpload2(event)">
+                                            
+                                            <!-- <button onclick="answerUploadImage()">upload 2</button> -->
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Answer image upload End-->
+
+                                    </div>
+                                    <br>
+                                    <div class="container-md flex">
+                                        <div class="field-heading fb2">
+                                        <h5>Tags</h5>
+                                        <select id="tag1" class=" js-example-tags" name="tag1" multiple="multiple" style="width: 100%;">
+                                        </select>
+                                        
+
+
+
+
+                                        <!-- <script>
+                                            $(".js-example-tags").select2({
+                                                tags: true
+                                                });
+                                        </script> -->
+                                        </div>
+                                        <div class=" field-heading fb2">
+                                            <div>
+                                                <h5>Difficulty</h5>
+                                                <select name="difficulty1" id="difficulty1" class="form-control form-select" >
+                                                    <option value="Easy">Easy</option>
+                                                    <option value="Medium">Medium</option>
+                                                    <option value="Hard">Hard</option>
+                                                    
+                                                    </select>
+                                                
+                                            </div>
+                                            </div>
+                                    </div>
+                                    <br>
+                                    
+                            </div>
+                            <div class="d-block text-right card-footer1">
+                                <a id="sbutton1" href="javascript:void(0);" class="btn-wide btn btn-success">Save</a>
+                                <a href="view1.html" class="btn-wide btn btn-success">Cancel</a>
+                            </div>
+                        </div>
+                            
+
+
+
+
+
+                        <br>
+                        <br> 
+                        
+                        
+                        </div>
+
+                        
+                    </div>
+                </div>
+                </div>
+                        
+        </div>
+    </div>
+<!-- Option 1: Bootstrap Bundle with Popper -->
+
+<script>
+    CKEDITOR.disableAutoInline = true;
+</script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript" src="./assets/scripts/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
+
+<script>
+    $(document).ready(function(){
+
+        
+        CKEDITOR.replace( 'editor1', {
+            extraPlugins: 'mathjax',
+            mathJaxLib: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML',
+            height: 320,
+            removeButtons: 'PasteFromWord'
+            } );
+        CKEDITOR.replace( 'editor12', {
+            extraPlugins: 'mathjax',
+            mathJaxLib: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML',
+            height: 320,
+            removeButtons: 'PasteFromWord'
+            } );
+        $('.js-example-basic-multiple').select2();
+        
+        $(".js-example-tags").select2({
+            tags: true
+        });
+        // getAllTag();
+        updateQuestion(); 
+        // updateQuestion(); 
+
+        $("#sbutton1").click(function () {
+            putData()
+        });
+        
+        
+
+        // $("#papercode1").select2( {
+        // placeholder: "Select Paper",
+        // width: "100%",
+        // allowClear: false
+        // } );
+
+    });
+    
+    </script>
+
+
+</body>
+<footer>
+    <link href="./custom.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="css/style.css" type="text/css"/> -->
+	
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="assets/scripts/drag_drop.js"></script>
+    <script src="assets/scripts/update_ques.js"></script>
+</footer>
+</html>

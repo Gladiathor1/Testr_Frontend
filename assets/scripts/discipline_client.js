@@ -1,0 +1,91 @@
+//const ur="http://ec2-18-219-154-70.us-east-2.compute.amazonaws.com/"
+var API_URL = ur+"testr-api/engine";
+var QUESTIONS_URL = API_URL+"/disciplines/";
+//let myid1;
+
+
+function getAllDiscipline(){
+    $.ajax({
+        url:QUESTIONS_URL+"?format=datatables" ,
+        type:'GET',
+        headers: {"Authorization": "Bearer "+localStorage.getItem("access")},
+        success:function(data)
+        {
+            var mydata=data.data;
+                $('#example').DataTable( {
+                    data: mydata,
+                    //ajax: QUESTIONS_URL+"?format=datatables",
+                    columns: [
+                        { data: 'id' },
+                        { data: 'title' },
+                        // 
+                        
+                    ]
+                    // "columnDefs": [
+                    //     { "width": "20%", "targets": 0 }
+                    //   ]
+            } );
+        }
+
+    });
+
+    // $.get( QUESTIONS_URL, function( data ) {
+    //    // console.log( typeof data ); // object
+    //    // console.log( data );
+    //     var mydata=data.results;
+    //     $('#example').DataTable( {
+    //         //data: mydata,
+    //         ajax: QUESTIONS_URL+"?format=datatables",
+            
+    //         columns: [
+    //             { data: 'id' },
+    //             { data: 'title' },
+    //             // { data: 'subject' },
+    //             // { data: 'difficulty' },
+    //             // { 
+    //             //     data: null,
+    //             //     className: "dt-center editor-edit",
+    //             //     defaultContent: '<i class="fa fa-pencil"/>',
+    //             //     orderable: false
+    //             // },
+    //             // {
+    //             //     data: null,
+    //             //     className: "dt-center editor-delete",
+    //             //     defaultContent: '<i class="fa fa-trash"/>',
+    //             //     orderable: false
+    //             // }
+    //         ]
+    //         // "columnDefs": [
+    //         //     { "width": "20%", "targets": 0 }
+    //         //   ]
+    // } );
+
+
+    // });
+
+        // $('#example2').on('click', 'td.editor-delete', function () {
+        //     let myid = $(this).closest("tr").find('td:eq(0)').text();
+        //     // alert(myid);
+ 
+        //     if ( confirm( "Are you sure you want to delete the selected rows?" ) ){
+                
+                
+        //             // $.ajax( QUESTIONS_URL+myid+"/", {
+        //             //     type : 'DELETE'
+        //             //     });
+                        
+        //                 var table = $('#example2').DataTable();
+        //                 table
+        //                     .row($(this).parents('tr'))
+        //                     .remove()
+        //                 .draw();
+        //         }
+        // } );
+    
+        // $('#example2').on('click', 'td.editor-edit', function () {
+        //     myid1 = $(this).closest("tr").find('td:eq(0)').text();
+        //     window.location.href='update.html?id='+myid1;
+        // } );
+
+}
+

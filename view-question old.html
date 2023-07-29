@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testr.pk</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
+    <link href="./main.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+</head>
+<body>
+    <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+        <div class="app-header header-shadow">
+            <div class="app-header__logo">
+                <a href="index.html"><div class="logo-src" style="width: 146px;"></div></a>
+                <div class="header__pane ml-auto">
+                    <div>
+                        <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="app-header__mobile-menu">
+                <div>
+                    <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="app-header__menu">
+                <span>
+                    <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                        <span class="btn-icon-wrapper">
+                            <i class="fa fa-ellipsis-v fa-w-6"></i>
+                        </span>
+                    </button>
+                </span>
+            </div>    <div class="app-header__content">
+                <!-- <div class="app-header-left">
+                    <div class="search-wrapper">
+                        <div class="input-holder">
+                            <input type="text" class="search-input" placeholder="Type to search">
+                            <button class="search-icon"><span></span></button>
+                        </div>
+                        <button class="close"></button>
+                    </div>
+                    <ul class="header-menu nav">
+                        <!-- <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link">
+                                <i class="nav-link-icon fa fa-database"> </i>
+                                Discipline
+                            </a>
+                        </li>
+                        <li class="btn-group nav-item">
+                            <a href="javascript:void(0);" class="nav-link">
+                                <i class="nav-link-icon fa fa-edit"></i>
+                                Subjects
+                            </a>
+                        </li>
+                        <li class="dropdown nav-item">
+                            <a href="javascript:void(0);" class="nav-link">
+                                <i class="nav-link-icon fa fa-cog"></i>
+                                Settings
+                            </a>
+                        </li>
+                    </ul>
+                </div> -->
+                <div class="app-header-right">
+                    <div class="header-btn-lg pr-0">
+                        <div class="widget-content p-0">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left">
+                                    <div class="btn-group">
+                                        <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/1.jpg" alt="">
+                                            <i class="fa fa-angle-down ml-2 opacity-8"></i>
+                                        </a>
+                                        <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
+                                            <!-- <button type="button" tabindex="0" class="dropdown-item">User Account</button>
+                                            <button type="button" tabindex="0" class="dropdown-item">Settings</button>
+                                            <h6 tabindex="-1" class="dropdown-header">Header</h6>
+                                            <button type="button" tabindex="0" class="dropdown-item">Actions</button> -->
+                                            <button type="button" tabindex="0" class="dropdown-item" onclick="logout_function()">Logout</button>
+                                            <!-- <div tabindex="-1" class="dropdown-divider"></div>
+                                            <button type="button" tabindex="0" class="dropdown-item">Dividers</button> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content-left  ml-3 header-user-info">
+                                    <div class="widget-heading">
+                                        User
+                                    </div>
+                                    <!-- <div class="widget-subheading">
+                                        Teacher
+                                    </div> -->
+                                </div>
+                                <!-- <div class="widget-content-right header-user-info ml-3">
+                                    <button type="button" class="btn-shadow p-1 btn btn-primary btn-sm show-toastr-example">
+                                        <i class="fa text-white fa-calendar pr-1 pl-1"></i>
+                                    </button>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>        </div>
+            </div>
+        </div>             
+          <div class="app-main">
+            <!-- <div class="app-sidebar sidebar-shadow">
+                <div class="app-header__logo">
+                    <div class="logo-src"></div>
+                    <div class="header__pane ml-auto">
+                        <div>
+                            <button type="button" class="hamburger close-sidebar-btn hamburger--elastic"
+                                    data-class="closed-sidebar">
+                                        <span class="hamburger-box">
+                                            <span class="hamburger-inner"></span>
+                                        </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-header__mobile-menu">
+                    <div>
+                        <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                                    <span class="hamburger-box">
+                                        <span class="hamburger-inner"></span>
+                                    </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="app-header__menu">
+                            <span>
+                                <button type="button"
+                                        class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                                    <span class="btn-icon-wrapper">
+                                        <i class="fa fa-ellipsis-v fa-w-6"></i>
+                                    </span>
+                                </button>
+                            </span>
+                </div>
+                <div class="scrollbar-sidebar">
+                    <div class="app-sidebar__inner">
+                        <ul class="vertical-nav-menu">
+                            <li class="app-sidebar__heading">Menu</li>
+                             <li>
+                                <a href="view_tag.html">
+                                    <i class="metismenu-icon fas fa-tags">&nbsp;</i>
+                                    Tags
+                                </a>
+                            </li>
+                            <li>
+                                <a href="view_discipline.html">
+                                    <i class="metismenu-icon fa fa-graduation-cap">&nbsp;</i>
+                                    Disciplines
+                                </a>
+                            </li>
+                            <li>
+                                <a href="view_subject.html">
+                                    <i class="metismenu-icon fas fa-book">&nbsp;</i>
+                                    Subjects
+                                </a>
+                            </li>
+                            <li>
+                                <a href="view_paper.html">
+                                    <i class="metismenu-icon fas fa-clipboard-list">&nbsp;</i>
+                                    Papers
+                                </a>
+                            </li>
+                            <li>
+                                <a href="view1.html" class="mm-active">
+                                    <i class="metismenu-icon fas fa-question-circle"> &nbsp;</i>
+                                    Questions
+                                </a>
+                            </li>
+    
+    
+                        </ul>
+                    </div>
+                </div>
+            </div> -->
+                
+                <div class="app-main__outer">
+                    
+                    
+                    
+                    <div class="app-main__inner">
+                        <div class="app-page-title">
+
+
+
+
+                            <!--  -->
+                            <div class="page-title-wrapper">
+
+                                <div class="page-title-heading">
+                                    <div class="page-title-icon">
+                                        <i class="pe-7s-display1 icon-gradient bg-premium-dark">
+                                        </i>
+                                    </div>
+                                    
+                                </div>
+        
+                                
+        
+                                <div class="page-title-heading" style="margin-left: 1%;">
+                                    <div>
+                                        <h2>View Question</h2>
+                                    </div>
+                                </div>
+        
+                                
+                            </div>
+                            <!--  -->
+                        
+                            <!-- d -->
+
+                            
+                            <!-- <br> -->
+
+                            <!-- -----------commented------------------ -->
+
+                             
+                            <!-- <div class="page-title-wrapper full-width">
+
+                                
+        
+                                
+                                <div class="page-title-heading full-width" style="margin-left: 6px;">
+                                    <div class="full-width">
+                                        <h6 for="discipline1">Discipline</h6>
+                                        <div class="form-control" id="discipline1"></div>
+                                    </div>
+                                </div>
+        
+                                <div class="page-title-heading full-width" style="margin-left: 1%;">
+                                    <div class="full-width">
+                                        <h6 for="subject1">Subject</h6>
+                                        <div class="form-control" id="subject1"></div>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="page-title-heading full-width" style="margin-left: 1%;">
+                                    <div class="full-width">
+                                        <h6 for="year1">Paper Year</h6>
+                                        <div class="form-control" id="year1"></div>
+                                    </div>
+                                </div>
+
+                                <div class="page-title-heading full-width" style="margin-left: 1%;">
+                                    <div class="full-width">
+                                        <h6 for="session1">Session</h6>
+                                        <div class="form-control" id="session1"></div>
+                                            
+                                            
+                                    </div>
+                                </div>
+                                
+
+                                <div class="page-title-heading full-width" style="margin-left: 1%;">
+                                    <div class="full-width">
+                                        <h6 for="papertitle1">Paper Title</h6>
+                                        <div class="form-control" id="paperTitle1"></div>
+                                    </div>
+                                </div>
+
+
+
+
+                               
+                            </div> -->
+                         <!-- -----------commented------------------ -->
+
+
+                        </div> 
+
+
+
+
+
+
+                        <div class="main-card mb-3 card">
+                            <div class="card-body">
+                                <div class="tab-content" id="addhere">
+
+
+                                    
+
+                                    <div class="tab-pane active show" id="tab-eg6-0" role="tabpanel">
+
+                                        <br>
+                                        <div class="flex">
+                                            <div class="fb2">
+                                                <div class="position-relative form-group">
+                                                    <section class="explain">
+                                                        <h5>Question Name</h5>
+                                                    </section>
+                                                    <div class="form-control" id="name1"></div>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="fb2">
+                                                <div>
+                                                    <h5>Question Type</h5>
+                                                    <div class="form-control" id="type1"></div>
+                                                    
+                                                </div>
+                                            </div> -->
+
+                                        </div>
+
+                                    <br>
+
+                                    <div class="position-relative form-group">
+                                        <section class="explain">
+                                        <h5>Question Statement</h5>
+                                    </section>
+                                    </div>
+
+                                        <form id="target" action="">
+                                            <div class="form-control" id="question1"></div>
+                                        </form>
+
+                                        <br>
+
+                                      <br>
+
+                                      <div class="position-relative form-group">
+                                          <section class="explain">
+                                          <h5>Answer Statement</h5>
+                                      </section>
+                                      </div>
+
+                                    <form id="target" action="">
+                                        <div class="form-control" id="answer1"></div>
+                                    </form>
+
+                                    </div>
+                                    
+                            </div>
+
+                            <br>
+                            <div class="container-md flex">
+                                <!-- <div class="fb2">
+                                    <h5>Tags</h5>
+                                <div class="form-control" id="tag1"></div>
+                                
+                                </div> -->
+                                <!-- <div class="fb2">
+                                    <div>
+                                        <h5>Difficulty</h5>
+                                        <div class="form-control" id="difficulty1"></div>
+                                        
+                                    </div>
+                                </div> -->
+                            </div>
+                            <br>
+
+                            
+                        </div>
+                    
+                        <br>
+                        <br> 
+                        
+                        </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="assets/scripts/view-question.js"></script>
+    <script>
+        $(document).ready(function(){
+            viewQuestion();});
+    </script>
+</body>
+
+<footer>
+    <link href="./custom.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+</footer>
+</html>
